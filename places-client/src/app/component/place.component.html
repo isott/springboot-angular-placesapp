@@ -1,0 +1,22 @@
+<div class="container text-center">
+ <form #placeForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Latitude" name="latitude" required [(ngModel)]="searchElement.latitude">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Longitude" name="longitude" required [(ngModel)]="searchElement.longitude">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Radius" name="radius" [(ngModel)]="searchElement.radius">
+        </div>
+    </div>
+
+    <div class="col-md-12 text-center">
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>
+  </form>
+</div>
+
+<div class="full" id="map">
+</div>

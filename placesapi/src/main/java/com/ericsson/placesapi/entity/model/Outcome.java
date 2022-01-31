@@ -1,4 +1,4 @@
-package com.ericsson.placesapi.model;
+package com.ericsson.placesapi.entity.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -11,6 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Outcome {
+
     @JsonProperty("next_page_token")
     private String nextPageToken;
     @JsonProperty("results")

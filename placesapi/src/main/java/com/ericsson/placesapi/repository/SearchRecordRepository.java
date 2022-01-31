@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface SearchRecordRepository extends JpaRepository<SearchRecord, Long> {
-    public Optional<SearchRecord> findByLatitudeAndLongitudeAndRadius(String latitude, String longitude, String radius);
+    public Optional<SearchRecord> findByLatitudeAndLongitudeAndRadius(Float latitude, Float longitude, Float radius);
 }

@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface CoordinateRepository extends JpaRepository<Coordinate, String> {
-    public Optional<Coordinate> findByLatitudeAndLongitude(String latitude, String longitude);
+    public Optional<Coordinate> findByLatitudeAndLongitude(Float latitude, Float longitude);
 }

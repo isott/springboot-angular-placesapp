@@ -1,0 +1,19 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+version: '3.8'
+
+services:
+  placesapi:
+    build: ./placesapi
+    container_name: placesapi
+    environment:
+      - GOOGLE_APIKEY=${GOOGLE_APIKEY}
+    ports:
+      - ${APP_PORT}:8080
+
+  places-client:
+    build: ./places-client
+    container_name: places-client
+    ports:
+      - ${CLIENT_PORT}:80
+    links:
+      - placesapi

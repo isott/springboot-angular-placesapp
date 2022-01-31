@@ -1,4 +1,4 @@
-package com.ericsson.placesapi.model;
+package com.ericsson.placesapi.entity.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -8,9 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Location {
-    @JsonProperty("lat")
-    private String latitude;
-    @JsonProperty("lng")
-    private String longitude;
+public class Geometry {
+    @JsonProperty("location")
+    private Location location;
 }

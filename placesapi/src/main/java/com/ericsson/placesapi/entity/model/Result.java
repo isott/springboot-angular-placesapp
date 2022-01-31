@@ -1,4 +1,4 @@
-package com.ericsson.placesapi.model;
+package com.ericsson.placesapi.entity.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Result {
+
     @JsonProperty("geometry")
     private Geometry geometry;
     @JsonProperty("place_id")

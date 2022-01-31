@@ -4,6 +4,7 @@ import { Loader } from '@googlemaps/js-api-loader';
 import { HttpClient } from '@angular/common/http';
 import { Place } from '../model/place';
 import { SearchElement } from '../model/searchelement';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-test',
@@ -15,7 +16,7 @@ export class PlaceComponent implements OnInit {
   searchElement = new SearchElement('','','')
 
   loader = new Loader({
-    apiKey: 'AIzaSyBKLinya4d-da_FlDQRXEdRjNI4PHVcCAA'
+    apiKey: environment.googleMapApiKey
   })
 
 

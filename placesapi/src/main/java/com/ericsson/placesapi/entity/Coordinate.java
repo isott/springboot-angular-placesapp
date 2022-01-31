@@ -23,8 +23,8 @@ public class Coordinate {
     @Column(name = "place_id")
     private String placeId;
 
-    private String latitude;
-    private String longitude;
+    private Float latitude;
+    private Float longitude;
 
 
     @ManyToMany(mappedBy = "coordinateList")

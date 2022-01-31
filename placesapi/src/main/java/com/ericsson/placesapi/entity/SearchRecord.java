@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -22,9 +20,9 @@ public class SearchRecord {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String latitude;
-    private String longitude;
-    private String radius;
+    private Float latitude;
+    private Float longitude;
+    private Float radius;
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(name = "search_coordinate",

@@ -1,5 +1,5 @@
 server:
-  port: 8070
+  port: 8080
 
 spring:
   datasource:
@@ -11,3 +11,6 @@ spring:
     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
   h2:
     console.enabled: true
+
+GOOGLE_APIKEY: dummy
+CORS_ORIGINS: dummy
